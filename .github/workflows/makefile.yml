@@ -14,6 +14,12 @@ jobs:
     steps:
     - uses: actions/checkout@v4
 
+    - name: Install autoconf
+      run: apt install autoconf
+      
+    - name: Apply autoconf
+      run: autoreconf -f -i
+      
     - name: configure
       run: ./configure
 
