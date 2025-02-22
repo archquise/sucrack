@@ -31,3 +31,10 @@ jobs:
 
     - name: Run distcheck
       run: make distcheck
+      
+    - name: Upload a Build Artifact
+      uses: actions/upload-artifact@v4.6.1
+      with:
+        name: sucrack-1.2.3
+        path: sucrack-1.2.3.tar.gz
+        retention-days: 1
