@@ -15,7 +15,7 @@ jobs:
     - uses: actions/checkout@v4
 
     - name: Install autoconf
-      run: apt install autoconf
+      run: sudo apt-get install -y autoconf
       
     - name: Apply autoconf
       run: autoreconf -f -i
